@@ -14,8 +14,8 @@ Part of what this code challenge is testing is your ability to follow given inst
 
 After cloning down the project:
 
-1. Run `npm install` in your terminal
-2. Run `npm start`: This will open both your React page on port `6002` and your backend on port `6001`.
+<!-- 1. Run `npm install` in your terminal
+2. Run `npm start`: This will open both your React page on port `6002` and your backend on port `6001`. -->
 3. The app uses [Semantic UI](https://semantic-ui.com/) for styling. If you see any unfamiliar classNames on some components, don't sweat! That's coming from Semantic UI and you shouldn't need to touch it.
 4. If you are unfamiliar with HTML tables, take a look at the [docs with an example here](https://www.w3schools.com/html/html_tables.asp)
 
@@ -25,7 +25,7 @@ The base URL for your backend is: `http://localhost:6001`
 
 These are the endpoints you might need:
 
-- GET: `/transactions`
+<!-- - GET: `/transactions` -->
 - POST: `/transactions`
 - DELETE: `/transactions/:id`
 
@@ -33,7 +33,7 @@ These are the endpoints you might need:
 
 As a user, I should be able to:
 
-- See a table of the transactions.
+<!-- - See a table of the transactions. -->
 - Fill out and submit the form to add a new transaction. This should add the new transaction to the table **as well as post the new transaction to the backend API for persistence**.
 - Filter transactions by typing into the search bar. Only transactions with a description matching the search term should be shown in the transactions table.
 
