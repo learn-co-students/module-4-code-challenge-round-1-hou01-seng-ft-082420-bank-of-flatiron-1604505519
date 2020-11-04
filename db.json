@@ -90,6 +90,13 @@
       "category": "Income",
       "amount": "10000",
       "id": 13
+    },
+    {
+      "date": "2020-11-04",
+      "description": "Champagne to Celebrate Passing Last Code Challenge!",
+      "category": "Entertainment",
+      "amount": "45",
+      "id": 14
     }
   ]
 }
