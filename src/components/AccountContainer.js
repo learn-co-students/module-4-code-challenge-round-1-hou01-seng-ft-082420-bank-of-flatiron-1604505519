@@ -34,7 +34,7 @@ class AccountContainer extends Component {
     .then(res=>res.json())
     .then(newTransaction=>this.setState({
       transactions: [...this.state.transactions,newTransaction],
-      filteredTransactions: [...this.state.transactions,newTransaction]
+      filteredTransactions: [...this.state.filteredTransactions,newTransaction]
     }))
   }
 
@@ -65,7 +65,7 @@ class AccountContainer extends Component {
   sortTransactions = (e) => {
     let sortTerm = e.target.value.toLowerCase();
     this.setState({
-      filteredTransactions: this.state.transactions.sort(function(a,b){
+      filteredTransactions: this.state.filteredTransactions.sort(function(a,b){
         if (a[sortTerm] < b[sortTerm]){
           return -1
         }

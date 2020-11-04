@@ -104,6 +104,27 @@
       "category": "c",
       "amount": "12",
       "id": 16
+    },
+    {
+      "date": "",
+      "description": "wendys",
+      "category": "z",
+      "amount": "12",
+      "id": 17
+    },
+    {
+      "date": "",
+      "description": "wendys",
+      "category": "f",
+      "amount": "12",
+      "id": 18
+    },
+    {
+      "date": "2020-11-06",
+      "description": "wendys",
+      "category": "q",
+      "amount": "2",
+      "id": 19
     }
   ]
 }
