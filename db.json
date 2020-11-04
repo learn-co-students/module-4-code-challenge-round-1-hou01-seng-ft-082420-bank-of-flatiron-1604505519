@@ -83,6 +83,27 @@
       "category": "test",
       "amount": "-20",
       "id": 13
+    },
+    {
+      "date": "2020-11-04",
+      "description": "wendys",
+      "category": "a",
+      "amount": "12",
+      "id": 14
+    },
+    {
+      "date": "2020-11-04",
+      "description": "wendys",
+      "category": "b",
+      "amount": "12",
+      "id": 15
+    },
+    {
+      "date": "2020-11-04",
+      "description": "wendys",
+      "category": "c",
+      "amount": "12",
+      "id": 16
     }
   ]
 }

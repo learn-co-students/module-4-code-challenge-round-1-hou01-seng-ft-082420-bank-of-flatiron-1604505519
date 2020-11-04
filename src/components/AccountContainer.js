@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import TransactionsList from "./TransactionsList";
 import Search from "./Search";
 import AddTransactionForm from "./AddTransactionForm";
-
+import Filter from './Filter'
 class AccountContainer extends Component {
 
   constructor(){
@@ -62,11 +62,27 @@ class AccountContainer extends Component {
     }))
   }
 
+  sortTransactions = (e) => {
+    let sortTerm = e.target.value.toLowerCase();
+    this.setState({
+      filteredTransactions: this.state.transactions.sort(function(a,b){
+        if (a[sortTerm] < b[sortTerm]){
+          return -1
+        }
+        else{
+         return 1
+        }
+        return 0 
+      })
+    })
+  }
+
   render() {
     return (
       <div>
         <Search searchTransaction={this.searchTransaction}/>
         <AddTransactionForm addNewTransaction={this.addNewTransaction}/>
+        <Filter sortTransactions={this.sortTransactions}/>
         <TransactionsList transactions={this.state.filteredTransactions} deleteTransaction={this.deleteTransaction}/>
       </div>
     );
