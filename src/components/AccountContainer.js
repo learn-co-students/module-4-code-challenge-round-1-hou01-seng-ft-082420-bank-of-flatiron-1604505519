@@ -2,14 +2,32 @@ import React, { Component } from "react";
 import TransactionsList from "./TransactionsList";
 import Search from "./Search";
 import AddTransactionForm from "./AddTransactionForm";
+const transactionUrl = `http://localhost:6001/transactions`;
 
 class AccountContainer extends Component {
+  state = {
+    transactions: []
+  }
+
+  componentDidMount(){
+    console.log('hello')
+    fetch(transactionUrl)
+    .then(res => res.json())
+    .then(data =>{
+      this.setState({
+        transactions: data
+      })
+    })
+  }
+
+
+
   render() {
     return (
       <div>
         <Search />
         <AddTransactionForm />
-        <TransactionsList />
+        <TransactionsList transactions={this.state.transactions} />
       </div>
     );
   }
