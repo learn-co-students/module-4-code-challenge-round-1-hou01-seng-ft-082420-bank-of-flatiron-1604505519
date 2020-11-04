@@ -1,10 +1,15 @@
 import React, { Component } from "react";
 
 class AddTransactionForm extends Component {
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.addTransaction(e)
+  }
   render() {
     return (
       <div className="ui segment">
-        <form className="ui form">
+        <form onSubmit={(e) => {this.handleSubmit(e)}} className="ui form">
           <div className="inline fields">
             <input type="date" name="date" />
             <input type="text" name="description" placeholder="Description" />
