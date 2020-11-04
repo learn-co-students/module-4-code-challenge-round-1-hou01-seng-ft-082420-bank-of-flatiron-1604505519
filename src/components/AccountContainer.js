@@ -23,9 +23,8 @@ class AccountContainer extends Component {
   }
 
   addTransaction = (transaction) => {
-    console.log(transaction)
+    console.log('adding this transaction',transaction)
     // debugger
-
     let transactionObj = {
       date: transaction.date,
       description: transaction.description,
@@ -58,6 +57,17 @@ class AccountContainer extends Component {
     })
   }
 
+  deleteTransaction = (transaction) => {
+    console.log('deleting this transaction',transaction)
+    // debugger
+    fetch(baseURL + transaction.id, {
+      method: 'DELETE'
+    })
+    this.setState({
+      transactions: this.state.transactions.filter( t => t.id !== transaction.id)
+    })
+  }
+
   render() {
 
     let filteredTransactions = this.state.transactions.filter( transaction => transaction.description.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
@@ -72,10 +82,12 @@ class AccountContainer extends Component {
         />
         <TransactionsList 
         transactions={filteredTransactions}
+        deleteTransaction={this.deleteTransaction}
         />
       </div>
     );
   }
+  
 }
 
 export default AccountContainer;

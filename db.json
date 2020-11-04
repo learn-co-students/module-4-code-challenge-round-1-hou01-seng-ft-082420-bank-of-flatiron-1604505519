@@ -86,13 +86,6 @@
     },
     {
       "date": "2020-11-04",
-      "description": "A coffee from Southside",
-      "category": "Food",
-      "amount": 3.75,
-      "id": 13
-    },
-    {
-      "date": "2020-11-04",
       "description": "A latte from Southside",
       "category": "Food",
       "amount": 5.55,
