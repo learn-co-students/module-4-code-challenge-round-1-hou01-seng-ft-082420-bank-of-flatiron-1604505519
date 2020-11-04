@@ -1,7 +1,9 @@
 import React from "react";
 import Transaction from "./Transaction";
 
-const TransactionsList = () => {
+const TransactionsList = ({transactions}) => {
+  //destructured the props to access just the transaction itself
+  console.log("transactions list", transactions)
   return (
     <table className="ui celled striped padded table">
       <tbody>
@@ -19,7 +21,8 @@ const TransactionsList = () => {
             <h3 className="ui center aligned header">Amount</h3>
           </th>
         </tr>
-        {/* render Transactions here */}
+        {/* itterating through each transaction and building a Transaction component */}
+        {transactions.map(trans => <Transaction transaction={trans}/>)}
       </tbody>
     </table>
   );

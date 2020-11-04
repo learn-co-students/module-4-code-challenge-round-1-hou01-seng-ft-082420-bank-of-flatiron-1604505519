@@ -83,6 +83,20 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "date": "2020-10-31",
+      "description": "A Phat bar tab",
+      "category": "Booze",
+      "amount": "250.00",
+      "id": 14
+    },
+    {
+      "date": "2020-11-02",
+      "description": "Flight to Denver",
+      "category": "Air",
+      "amount": "150",
+      "id": 15
     }
   ]
 }
