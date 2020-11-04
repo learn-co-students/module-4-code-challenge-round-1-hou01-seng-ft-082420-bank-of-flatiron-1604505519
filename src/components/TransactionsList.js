@@ -19,7 +19,13 @@ const TransactionsList = () => {
             <h3 className="ui center aligned header">Amount</h3>
           </th>
         </tr>
-        {/* render Transactions here */}
+        
+        <Transaction 
+          // amount={this.props.transactionData.amount}
+          // description={this.props.transactionData.description}
+          // category={this.props.transactionData.category}
+          // date={this.props.transactionData.date}
+          />  
       </tbody>
     </table>
   );
