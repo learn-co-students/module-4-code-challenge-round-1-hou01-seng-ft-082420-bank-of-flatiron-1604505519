@@ -1,8 +1,10 @@
 import React, { Component } from "react";
 import AccountContainer from "./AccountContainer";
 import "../stylesheets/App.css";
+// const URLBase = "http://localhost:6001/transactions/"
 
 class App extends Component {
+
   render() {
     return (
       <div className="ui raised segment">
