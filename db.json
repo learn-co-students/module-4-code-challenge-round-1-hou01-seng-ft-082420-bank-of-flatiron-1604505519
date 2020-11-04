@@ -83,6 +83,41 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "date": "2020-11-06",
+      "description": "Burks",
+      "category": "golf",
+      "amount": "0.07",
+      "id": 13
+    },
+    {
+      "date": "2020-11-13",
+      "description": "Burks",
+      "category": "golf",
+      "amount": "900",
+      "id": 14
+    },
+    {
+      "date": "2020-11-06",
+      "description": "Burks",
+      "category": "golf",
+      "amount": "9999",
+      "id": 15
+    },
+    {
+      "date": "2020-11-05",
+      "description": "Burks",
+      "category": "golf",
+      "amount": "999",
+      "id": 16
+    },
+    {
+      "date": "2020-11-06",
+      "description": "Burks",
+      "category": "golf",
+      "amount": "999",
+      "id": 17
     }
   ]
 }
