@@ -83,6 +83,13 @@
       "description": "Venmo, Pay Roommate for Rent",
       "category": "Housing",
       "amount": -975
+    },
+    {
+      "date": "2020-11-05",
+      "description": "First Apple Paycheck",
+      "category": "Income",
+      "amount": "10000",
+      "id": 13
     }
   ]
 }
