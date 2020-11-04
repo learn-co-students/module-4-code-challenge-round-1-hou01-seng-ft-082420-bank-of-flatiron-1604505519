@@ -3,20 +3,22 @@ import Transaction from "./Transaction";
 
 const TransactionsList = (props) => {
   
-  let {transactions, deleteTransaction} = props
+  let {transactions, deleteTransaction, setSort} = props
 
   return (
     <table className="ui celled striped padded table">
       <tbody>
         <tr>
           <th>
-            <h3 className="ui center aligned header">Date</h3>
+            <h3 className="ui center aligned header">
+              Date
+            </h3>
           </th>
           <th>
-            <h3 className="ui center aligned header">Description</h3>
+            <h3 className="ui center aligned header">Description <button className="ui icon button" onClick={(e) => setSort(e.target)} ><i id="Description" className="sort down icon"></i></button></h3>
           </th>
           <th>
-            <h3 className="ui center aligned header">Category</h3>
+            <h3 className="ui center aligned header">Category <button className="ui icon button" onClick={(e) => setSort(e.target)}><i id="Category" className="sort down icon"></i></button></h3>
           </th>
           <th>
             <h3 className="ui center aligned header">Amount</h3>

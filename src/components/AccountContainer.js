@@ -9,7 +9,8 @@ class AccountContainer extends Component {
 
   state = {
     transactions: [],
-    searchTerm: ''
+    searchTerm: '',
+    sortTerm: ''
   }
 
   componentDidMount(){
@@ -68,9 +69,29 @@ class AccountContainer extends Component {
     })
   }
 
+  setSort = ({id}) => {
+    console.log('setting sort', id)
+    this.setState({
+      sortTerm: id
+    })
+  }
+
+  sortTransactions = () => {
+    switch (this.state.sortTerm) {
+      case 'Description':
+        return this.state.transactions.sort((a,b) => a.description.localeCompare(b.description));
+        break;
+      case 'Category':
+        return this.state.transactions.sort((a,b) => a.category.localeCompare(b.category));
+        break;
+      default:
+        return this.state.transactions;
+    }
+  }
+
   render() {
 
-    let filteredTransactions = this.state.transactions.filter( transaction => transaction.description.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
+    let filteredTransactions = this.sortTransactions().filter( transaction => transaction.description.toLowerCase().includes(this.state.searchTerm.toLowerCase()))
 
     return (
       <div>
@@ -83,11 +104,12 @@ class AccountContainer extends Component {
         <TransactionsList 
         transactions={filteredTransactions}
         deleteTransaction={this.deleteTransaction}
+        setSort={this.setSort}
         />
       </div>
     );
   }
-  
+
 }
 
 export default AccountContainer;
