@@ -1,10 +1,30 @@
 import React, { Component } from "react";
 
 class AddTransactionForm extends Component {
+  constructor(){
+    super()
+    this.state = {
+      date: '',
+      amount: '',
+      description: '',
+      category: ''
+    }
+  }
+
+
+
+  handleChange = (e) => {
+    let {value,name} = e.target
+    this.setState({
+      [name]: value
+    })
+  }
+
+
   render() {
     return (
       <div className="ui segment">
-        <form className="ui form">
+        <form onChange = {this.handleChange} onSubmit = {() => this.props.handleSubmit(this.state)} className="ui form">
           <div className="inline fields">
             <input type="date" name="date" />
             <input type="text" name="description" placeholder="Description" />
